@@ -14,6 +14,9 @@ body {
 .headingText {
 	color: #bf0095
 }
+.example-highlight {
+	font-weight: bold;
+}
 
 .paraStyle {
 	font-family: DauphinPlain;
@@ -26,11 +29,69 @@ body {
 <h2 style="text-align:center;color:#0033ab;">Welcome to GIT session, a brief overview by Saleem Khan</h2>
 
 <h2>What is GIT?</h2>
-<p class="paraStyle">Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files  <br/>-- taken from wiki </p>
+<p class="paraStyle">Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files.  <br/>-- taken from wiki </p>
 </body>
 
 <h3 class="headingText">git config</h3>
-<p class="paraStyle">Sets configuration values for your user name, email, gpg key, preferred diff algorithm, file formats and more. Example: git config --global user.name "My Name" git config --global user.email "user@domain.com" cat ~/.gitconfig [user] name = My Name email = user@domain.com
+<p class="paraStyle">Sets configuration values for your user name, email, gpg key, preferred diff algorithm, file formats and more. <br/><span class="example-highlight">Example: git config --global user.name "My Name" git config --global user.email "user@domain.com" cat ~/.gitconfig [user] name = My Name email = user@domain.com</span>
 </p>
+
+<h3 class="headingText">git clone</h3>
+<p class="paraStyle">Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again and push to it if you have permissions. <br/><span class="example-highlight">Example: git clone git@github.com:user/test.git or https://github.com/skpear/gse-smart.git</span></p>
+
+<h3 class="headingText">git add</h3>
+<p class="paraStyle">Adds files changes in your working directory to your index. <br/><span class="example-highlight">Example: git add .</span></p>
+
+<h3 class="headingText">git reset HEAD <filename></h3>
+<p class="paraStyle">To unstage a file in git from staging area.</p>
+
+<h3 class="headingText">git status</h3>
+<p class="paraStyle">Shows you the status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing). <br/><span class="example-highlight">Example: git status</span></p>
+
+<h3 class="headingText">git rm</h3>
+<p class="paraStyle">Removes files from your index and your working directory so they will not be tracked. <br/><span class="example-highlight">Example: git rm filename</span></p>
+
+<h3 class="headingText">git commit</h3>
+<p class="paraStyle">Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit. 
+	<br/><span class="example-highlight">Examples: git commit -m ‘committing added changes’</span> 
+</p>
+
+<h3 class="headingText">git branch</h3>
+<p class="paraStyle">Lists existing branches. Also remote branches if '-R' option is given.
+<br/><span class="example-highlight">Example: git branch, git branch -r</span></p> 
+
+<h3 class="headingText">git checkout</h3>
+<p class="paraStyle">Checks out a different branch – switches branches by updating the index, working tree, and HEAD to reflect the chosen branch. <br/><span class="example-highlight">Example: git checkout newbranch</span></p>
+
+<h3 class="headingText">git merge</h3>
+<p class="paraStyle">Merges one or more branches into your current branch and automatically creates a new commit if there are no conflicts. <br/><span class="example-highlight">Example: git merge newbranchversion</span></p>
+
+<h3 class="headingText">git stash</h3>
+<p class="paraStyle">Temporarily saves changes that you don’t want to commit immediately. You can apply the changes later. <br/><span class="example-highlight">Example: git stash Saved working directory and index state "WIP on master: 84f241e first commit" HEAD is now at 84f241e first commit (To restore them type "git stash apply")</p>
+
+<h3 class="headingText">git tag</h3>
+<p class="paraStyle">List all the created tags in git. <br/><span class="example-highlight">Example: git tag</span></p>
+
+<h3 class="headingText">git fetch</h3>
+<p class="paraStyle">Fetches all the objects from the remote repository that are not present in the local one. <br/><span class="example-highlight">Example: git fetch origin</span></p>
+
+<h3 class="headingText">git pull</h3>
+<p class="paraStyle">Fetches the files from the remote repository and merges it with your local one. This command is equal to the git fetch and the git merge sequence. <br/><span class="example-highlight">Example: git pull origin</span></p>
+
+<h3 class="headingText">git push</h3>
+<p class="paraStyle">Pushes all the modified local objects to the remote repository and advances its branches. <br/><span class="example-highlight">Example: git push origin master</span></p>
+
+<h3 class="headingText">git remote</h3>
+<p class="paraStyle">Shows all the remote versions of your repository. <br/><span class="example-highlight">Example: git remote origin</span></p>
+
+<h3 class="headingText">git log</h3>
+<p class="paraStyle">Shows a listing of commits on a branch including the corresponding details. 
+	<br/><span class="example-highlight">Example: git log commit 84f241e8a0d768fb37ff7ad40e294b61a99a0abe Author: User <user@domain.com> Date: Mon May 3 09:24:05 2010 +0300 first commit</span></p>
+
+<h3 class="headingText">git show</h3>
+<p class="paraStyle">Shows information about a git object. <br/><span class="example-highlight">Example: git show commit 84f241e8a0d768fb37ff7ad40e294b61a99a0abe Author: User <user@domain.com> Date: Mon May 3 09:24:05 2010 +0300 first commit diff --git a/README b/README new file mode 100644 index 0000000..e69de29</span></p>
+
+<h3 class="headingText">git grep</h3>
+<p class="paraStyle">Lets you search through your trees of content for words and phrases. <br/><span class="example-highlight">Example: git grep "www.siteground.com" -- *.php</span></p>
 
 </html>
