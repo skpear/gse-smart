@@ -1,3 +1,8 @@
 This is new line.
 
 Another new line.
+
+
+Added line 1 as new change.
+
+New line for demoing stash
